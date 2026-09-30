@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="format-detection" content="telephone=no">
+<title>香香漫画 - 免费在线看漫画_热门漫画大全_更新最快的漫画网站</title>
+<meta name="description" content="香香漫画（xiangxiangmanhua-app）提供海量热门漫画免费在线阅读，涵盖热血、恋爱、悬疑、玄幻、都市等全题材漫画分类，每日更新、高清画质、手机电脑都能看，是你追漫的首选漫画网站。">
+<meta name="keywords" content="香香漫画,香香漫画官网,香香漫画在线看,免费漫画,漫画大全,热门漫画排行,在线漫画阅读,漫画分类,更新漫画">
+<meta name="author" content="香香漫画">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#0d0b1f">
+<link rel="canonical" href="https://xiangxiangmanhua-app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="香香漫画">
+<meta property="og:title" content="香香漫画 - 免费在线看漫画_热门漫画大全">
+<meta property="og:description" content="香香漫画官网，海量热门漫画免费看，全题材漫画分类，每日更新，手机端自适应阅读。">
+<meta property="og:url" content="https://xiangxiangmanhua-app/">
+<meta property="og:image" content="https://xiangxiangmanhua-app/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="香香漫画 - 免费在线看漫画">
+<meta name="twitter:description" content="香香漫画官网，海量热门漫画免费看，全题材漫画分类，每日更新。">
+<style>
+:root{
+  --bg:#0d0b1f;
+  --bg-2:#151132;
+  --card:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.12);
+  --txt:#eef0ff;
+  --sub:#a7a9d0;
+  --p1:#a855f7;
+  --p2:#ff4d9d;
+  --p3:#22d3ee;
+  --radius:18px;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.7;font-size:16px;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(680px 420px at 12% -6%,rgba(168,85,247,.42),transparent 62%),
+    radial-gradient(620px 400px at 92% 4%,rgba(255,77,157,.32),transparent 60%),
+    radial-gradient(720px 520px at 50% 108%,rgba(34,211,238,.22),transparent 62%),
+    var(--bg);
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+h1,h2,h3{line-height:1.35;font-weight:800;letter-spacing:.5px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 18px}
+
+/* ===== 顶部导航 ===== */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(13,11,31,.82);
+  backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900;letter-spacing:1px;white-space:nowrap}
+.logo i{
+  width:34px;height:34px;border-radius:10px;flex:0 0 34px;
+  background:linear-gradient(135deg,var(--p1),var(--p2));
+  display:inline-flex;align-items:center;justify-content:center;
+  font-style:normal;font-size:18px;color:#fff;
+  box-shadow:0 6px 18px rgba(168,85,247,.45);
+}
+.logo b{background:linear-gradient(90deg,#fff,#c9a7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.menu{display:flex;align-items:center;gap:6px}
+.menu a{
+  padding:8px 12px;border-radius:10px;font-size:15px;color:#dcdcf5;
+  transition:.25s;white-space:nowrap;
+}
+.menu a:hover,.menu a:focus{background:rgba(168,85,247,.22);color:#fff}
+.nav-cta{
+  padding:8px 14px;border-radius:999px;font-size:14px;font-weight:700;color:#fff;
+  background:linear-gradient(90deg,var(--p1),var(--p2));
+  box-shadow:0 6px 16px rgba(255,77,157,.35);
+}
+.burger{
+  display:none;width:42px;height:38px;border:1px solid var(--line);border-radius:10px;
+  background:rgba(255,255,255,.05);color:#fff;font-size:18px;cursor:pointer;
+}
+
+/* ===== Hero ===== */
+.hero{padding:52px 0 26px}
+.hero-box{
+  background:linear-gradient(150deg,rgba(168,85,247,.16),rgba(34,211,238,.10));
+  border:1px solid var(--line);border-radius:26px;padding:36px 28px;
+  position:relative;overflow:hidden;
+}
+.hero-box::after{
+  content:"";position:absolute;width:260px;height:260px;right:-80px;top:-90px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,77,157,.34),transparent 68%);
+}
+.tagline{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#e9d8ff;
+  background:rgba(255,255,255,.08);border:1px solid var(--line);
+  padding:6px 14px;border-radius:999px;
+}
+.tagline s{width:6px;height:6px;border-radius:50%;background:var(--p3);box-shadow:0 0 10px var(--p3)}
+h1{font-size:clamp(28px,6vw,52px);margin:16px 0 12px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--p2),var(--p1),var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--sub);font-size:clamp(15px,3.6vw,18px);max-width:720px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;
+  font-weight:700;font-size:15px;transition:.25s;border:1px solid transparent;
+}
+.btn-1{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff;box-shadow:0 10px 24px rgba(168,85,247,.36)}
+.btn-2{background:rgba(255,255,255,.06);border-color:var(--line);color:#eaeaff}
+.btn:hover{transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center}
+.stat b{display:block;font-size:clamp(18px,4.4vw,26px);color:#fff}
+.stat span{font-size:12px;color:var(--sub)}
+
+/* ===== 通用 section ===== */
+section{scroll-margin-top:70px;padding:38px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(21px,4.6vw,30px);position:relative;padding-left:14px}
+.sec-head h2::before{
+  content:"";position:absolute;left:0;top:.32em;width:5px;height:1em;border-radius:4px;
+  background:linear-gradient(180deg,var(--p1),var(--p3));
+}
+.sec-head p{color:var(--sub);font-size:14px;margin-top:6px}
+.more{font-size:14px;color:#cbb6ff;border-bottom:1px dashed rgba(203,182,255,.5);padding-bottom:2px}
+
+/* ===== 卡片网格 ===== */
+.grid{display:grid;gap:16px;grid-template-columns:repeat(4,1fr)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.3s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(168,85,247,.55);box-shadow:0 16px 34px rgba(0,0,0,.42)}
+.cover{
+  position:relative;aspect-ratio:3/4;display:flex;align-items:flex-end;padding:12px;
+  font-weight:800;font-size:17px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5);
+  overflow:hidden;
+}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.62))}
+.cover span{position:relative;z-index:1}
+.cover u{position:absolute;z-index:1;top:10px;left:10px;font-size:11px;text-decoration:none;
+  background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.28);padding:3px 8px;border-radius:999px}
+.c1{background:linear-gradient(160deg,#7c3aed,#ff4d9d)}
+.c2{background:linear-gradient(160deg,#0ea5e9,#22d3ee)}
+.c3{background:linear-gradient(160deg,#f97316,#facc15)}
+.c4{background:linear-gradient(160deg,#059669,#84cc16)}
+.c5{background:linear-gradient(160deg,#e11d48,#fb7185)}
+.c6{background:linear-gradient(160deg,#4f46e5,#a855f7)}
+.c7{background:linear-gradient(160deg,#0891b2,#6366f1)}
+.c8{background:linear-gradient(160deg,#db2777,#8b5cf6)}
+.card-body{padding:12px 14px 15px;flex:1;display:flex;flex-direction:column;gap:6px}
+.card-body h3{font-size:16px;font-weight:700}
+.card-body p{font-size:13px;color:var(--sub);flex:1}
+.meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--sub)}
+.meta b{color:#ffd166}
+
+/* ===== 排行榜 ===== */
+.rank-list{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+.rank-item{
+  display:flex;align-items:center;gap:14px;padding:12px 14px;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;transition:.25s;
+}
+.rank-item:hover{border-color:rgba(34,211,238,.5);transform:translateX(4px)}
+.no{
+  width:38px;height:38px;flex:0 0 38px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:16px;color:#fff;background:rgba(255,255,255,.1);
+}
+.no.t1{background:linear-gradient(135deg,#f59e0b,#ef4444)}
+.no.t2{background:linear-gradient(135deg,#94a3b8,#64748b)}
+.no.t3{background:linear-gradient(135deg,#b45309,#f59e0b)}
+.rank-txt{flex:1;min-width:0}
+.rank-txt h3{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-txt p{font-size:12px;color:var(--sub)}
+.hot{font-size:12px;color:#ff85b3;white-space:nowrap}
+
+/* ===== 分类 ===== */
+.cats{display:grid;gap:12px;grid-template-columns:repeat(6,1fr)}
+.cat{
+  padding:16px 10px;text-align:center;border-radius:14px;font-weight:700;font-size:15px;
+  background:var(--card);border:1px solid var(--line);transition:.25s;
+}
+.cat small{display:block;font-weight:400;font-size:12px;color:var(--sub);margin-top:3px}
+.cat:hover{background:linear-gradient(135deg,rgba(168,85,247,.3),rgba(34,211,238,.2));border-color:rgba(168,85,247,.6)}
+
+/* ===== 时间表 ===== */
+.update{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+.up-item{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.up-item i{width:52px;height:52px;flex:0 0 52px;border-radius:12px;font-style:normal;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:13px}
+.up-item h3{font-size:15px}
+.up-item p{font-size:12px;color:var(--sub)}
+
+/* ===== 会员 ===== */
+.vip{
+  border-radius:26px;padding:34px 26px;
+  background:linear-gradient(135deg,rgba(255,77,157,.18),rgba(168,85,247,.18),rgba(34,211,238,.14));
+  border:1px solid var(--line);
+}
+.vip-grid{display:grid;gap:14px;grid-template-columns:repeat(4,1fr);margin-top:20px}
+.vip-card{background:rgba(13,11,31,.5);border:1px solid var(--line);border-radius:16px;padding:18px 16px}
+.vip-card b{display:block;font-size:16px;margin-bottom:6px;color:#fff}
+.vip-card p{font-size:13px;color:var(--sub)}
+
+/* ===== FAQ 手风琴 ===== */
+.faq{display:grid;gap:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:20px;color:var(--p3)}
+details[open] summary::after{content:"−"}
+details p{font-size:14px;color:var(--sub);margin-top:10px}
+
+/* ===== 关于 ===== */
+.about{display:grid;gap:16px;grid-template-columns:1.2fr .8fr}
+.about-box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.about-box h3{font-size:18px;margin-bottom:10px}
+.about-box p{color:var(--sub);font-size:14.5px}
+.about-box ul{margin-top:12px;display:grid;gap:8px}
+.about-box li{font-size:14px;color:var(--sub);padding-left:18px;position:relative}
+.about-box li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:linear-gradient(90deg,var(--p1),var(--p3))}
+
+/* ===== 页脚 ===== */
+footer{border-top:1px solid var(--line);margin-top:30px;padding:34px 0 40px;background:rgba(0,0,0,.22)}
+.f-grid{display:grid;gap:20px;grid-template-columns:1.4fr 1fr 1fr 1fr}
+.f-col h4{font-size:15px;margin-bottom:12px;color:#fff}
+.f-col a,.f-col li{display:block;font-size:13.5px;color:var(--sub);padding:4px 0;transition:.2s}
+.f-col a:hover{color:#fff;padding-left:4px}
+.f-bottom{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:#8b8db4;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.totop{
+  position:fixed;right:16px;bottom:18px;width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;display:flex;
+  align-items:center;justify-content:center;font-size:18px;z-index:50;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+
+/* ===== 响应式 ===== */
+@media (max-width:1024px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .cats{grid-template-columns:repeat(4,1fr)}
+  .vip-grid{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  .menu{
+    display:none;position:absolute;left:0;right:0;top:62px;flex-direction:column;align-items:stretch;
+    gap:2px;background:rgba(13,11,31,.97);border-bottom:1px solid var(--line);padding:10px 16px 16px;
+  }
+  .menu.show{display:flex}
+  .menu a{padding:12px 10px;border-radius:8px;font-size:16px}
+  .nav-cta{text-align:center;margin-top:8px}
+  .burger{display:block}
+  .nav{position:relative}
+  .hero{padding:32px 0 16px}
+  .hero-box{padding:26px 18px;border-radius:20px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .rank-list,.update{grid-template-columns:1fr}
+  .cats{grid-template-columns:repeat(3,1fr)}
+  .vip-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  section{padding:28px 0}
+}
+@media (max-width:420px){
+  .grid{grid-template-columns:1fr}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "name":"香香漫画",
+      "alternateName":"香香漫画官网",
+      "url":"https://xiangxiangmanhua-app/",
+      "description":"香香漫画提供海量热门漫画免费在线阅读，涵盖热血、恋爱、悬疑、玄幻、都市等题材，每日更新。",
+      "inLanguage":"zh-CN",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://xiangxiangmanhua-app/search?q={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"Organization",
+      "name":"香香漫画",
+      "url":"https://xiangxiangmanhua-app/",
+      "description":"香香漫画是在线漫画阅读平台，主打免费看漫画、热门漫画排行与全题材漫画分类。",
+      "areaServed":"CN"
+    },
+    {
+      "@type":"CollectionPage",
+      "name":"香香漫画 - 热门漫画大全",
+      "url":"https://xiangxiangmanhua-app/",
+      "about":{
+        "@type":"Thing",
+        "name":"在线漫画"
+      },
+      "mainEntity":{
+        "@type":"ItemList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"斗破天穹"},
+          {"@type":"ListItem","position":2,"name":"都市狂医"},
+          {"@type":"ListItem","position":3,"name":"深海迷踪"},
+          {"@type":"ListItem","position":4,"name":"星轨恋人"}
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="topbar">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="logo" href="#top" aria-label="香香漫画首页">
+        <i aria-hidden="true">漫</i><b>香香漫画</b>
+      </a>
+      <ul class="menu" id="menu">
+        <li><a href="#featured">精选漫画</a></li>
+        <li><a href="#rank">热门排行</a></li>
+        <li><a href="#category">漫画分类</a></li>
+        <li><a href="#update">最新更新</a></li>
+        <li><a href="#vip">会员特权</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#about">关于香香漫画</a></li>
+        <li><a class="nav-cta" href="#vip">免费追漫</a></li>
+      </ul>
+      <button class="burger" id="burger" type="button" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-box">
+        <span class="tagline"><s aria-hidden="true"></s>香香漫画 · 每日 10:00 准时更新</span>
+        <h1>上<em>香香漫画</em>，免费在线看漫画</h1>
+        <p class="lead">
+          香香漫画是专注在线漫画阅读的漫画网站，收录热血、恋爱、悬疑、玄幻、都市、搞笑等全题材漫画，
+          支持手机、平板、电脑多端自适应阅读，高清画质、秒开加载，追漫不掉线。
+        </p>
+        <div class="hero-btns">
+          <a class="btn btn-1" href="#featured">立即开始看漫画</a>
+          <a class="btn btn-2" href="#category">浏览漫画分类</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>38,000+</b><span>漫画作品</span></div>
+          <div class="stat"><b>26</b><span>漫画题材分类</span></div>
+          <div class="stat"><b>每日更新</b><span>连载同步</span></div>
+          <div class="stat"><b>1080P</b><span>高清画质</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 栏目1：精选漫画 -->
+  <section id="featured" aria-labelledby="h-featured">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-featured">香香漫画精选推荐</h2>
+          <p>编辑部挑片，本周末必看的 8 部热门漫画</p>
+        </div>
+        <a class="more" href="#rank">查看完整漫画榜单 →</a>
+      </div>
+      <ul class="grid">
+        <li>
+          <article class="card">
+            <a href="#" aria-label="阅读漫画《斗破天穹》">
+              <div class="cover c1"><u>热血</u><span>斗破天穹</span></div>
+              <div class="card-body">
+                <h3>斗破天穹</h3>
+                <p>少年逆袭登顶，香香漫画热血榜长期霸榜之作。</p>
+                <div class="meta"><b>9.8 分</b><span>更新至 482 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="阅读漫画《都市狂医》">
+              <div class="cover c2"><u>都市</u><span>都市狂医</span></div>
+              <div class="card-body">
+                <h3>都市狂医</h3>
+                <p>一手银针定生死，都市爽文改编的爆款漫画。</p>
+                <div class="meta"><b>9.6 分</b><span>更新至 316 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="阅读漫画《深海迷踪》">
+              <div class="cover c3"><u>悬疑</u><span>深海迷踪</span></div>
+              <div class="card-body">
+                <h3>深海迷踪</h3>
+                <p>层层反转的悬疑漫画，香香漫画站内口碑第一。</p>
+                <div class="meta"><b>9.5 分</b><span>更新至 158 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="阅读漫画《星轨恋人》">
+              <div class="cover c4"><u>恋爱</u><span>星轨恋人</span></div>
+              <div class="card-body">
+                <h3>星轨恋人</h3>
+                <p>跨越星轨的爱恋，少女漫画人气冠军。</p>
+                <div class="meta"><b>9.4 分</b><span>更新至 203 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="阅读漫画《万古神帝》">
+              <div class="cover c5"><u>玄幻</u><span>万古神帝</span></div>
+              <div class="card-body">
+                <h3>万古神帝</h3>
+                <p>万古长青的神帝之路，玄幻漫画迷必追。</p>
+                <div class="meta"><b>9.3 分</b><span>更新至 721 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="阅读漫画《食神小当家》">
+              <div class="cover c6"><u>美食</u><span>食神小当家</span></div>
+              <div class="card-body">
+                <h3>食神小当家</h3>
+                <p>治愈系美食漫画，看饿了也算一种本事。</p>
+                <div class="meta"><b>9.2 分</b><span>更新至 96 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="阅读漫画《机甲纪元》">
+              <div class="cover c7"><u>科幻</u><span>机甲纪元</span></div>
+              <div class="card-body">
+                <h3>机甲纪元</h3>
+                <p>硬核机甲战斗，科幻漫画中的视觉天花板。</p>
+                <div class="meta"><b>9.1 分</b><span>更新至 264 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="阅读漫画《校园爆笑王》">
+              <div class="cover c8"><u>搞笑</u><span>校园爆笑王</span></div>
+              <div class="card-body">
+                <h3>校园爆笑王</h3>
+                <p>一天三更的快乐源泉，解压漫画首选。</p>
+                <div class="meta"><b>9.0 分</b><span>更新至 512 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 栏目2：热门排行 -->
+  <section id="rank" aria-labelledby="h-rank">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-rank">香香漫画热门排行榜</h2>
+          <p>基于全站阅读热度实时统计，每小时刷新一次</p>
+        </div>
+        <a class="more" href="#update">看看最新更新 →</a>
+      </div>
+      <ol class="rank-list">
+        <li><a class="rank-item" href="#">
+          <span class="no t1">1</span>
+          <div class="rank-txt"><h3>斗破天穹</h3><p>热血 · 玄幻 · 连载中</p></div>
+          <span class="hot">🔥 1,286 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no t2">2</span>
+          <div class="rank-txt"><h3>都市狂医</h3><p>都市 · 爽文 · 连载中</p></div>
+          <span class="hot">🔥 1,054 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no t3">3</span>
+          <div class="rank-txt"><h3>深海迷踪</h3><p>悬疑 · 推理 · 连载中</p></div>
+          <span class="hot">🔥 968 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">4</span>
+          <div class="rank-txt"><h3>星轨恋人</h3><p>恋爱 · 少女 · 连载中</p></div>
+          <span class="hot">🔥 872 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">5</span>
+          <div class="rank-txt"><h3>机甲纪元</h3><p>科幻 · 机甲 · 连载中</p></div>
+          <span class="hot">🔥 764 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">6</span>
+          <div class="rank-txt"><h3>万古神帝</h3><p>玄幻 · 修真 · 连载中</p></div>
+          <span class="hot">🔥 713 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">7</span>
+          <div class="rank-txt"><h3>校园爆笑王</h3><p>搞笑 · 日常 · 连载中</p></div>
+          <span class="hot">🔥 655 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">8</span>
+          <div class="rank-txt"><h3>食神小当家</h3><p>美食 · 治愈 · 连载中</p></div>
+          <span class="hot">🔥 602 万</span></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 栏目3：漫画分类 -->
+  <section id="category" aria-labelledby="h-category">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-category">香香漫画全题材分类</h2>
+          <p>26 个漫画标签，按口味挑书不迷路</p>
+        </div>
+        <a class="more" href="#featured">回到精选漫画 →</a>
+      </div>
+      <ul class="cats">
+        <li><a class="cat" href="#">热血<small>328 部</small></a></li>
+        <li><a class="cat" href="#">恋爱<small>612 部</small></a></li>
+        <li><a class="cat" href="#">悬疑<small>189 部</small></a></li>
+        <li><a class="cat" href="#">玄幻<small>745 部</small></a></li>
+        <li><a class="cat" href="#">都市<small>534 部</small></a></li>
+        <li><a class="cat" href="#">搞笑<small>426 部</small></a></li>
+        <li><a class="cat" href="#">科幻<small>217 部</small></a></li>
+        <li><a class="cat" href="#">历史<small>163 部</small></a></li>
+        <li><a class="cat" href="#">美食<small>98 部</small></a></li>
+        <li><a class="cat" href="#">竞技<small>142 部</small></a></li>
+        <li><a class="cat" href="#">治愈<small>276 部</small></a></li>
+        <li><a class="cat" href="#">恐怖<small>87 部</small></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 栏目4：最新更新 -->
+  <section id="update" aria-labelledby="h-update">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-update">香香漫画今日更新表</h2>
+          <p>每天 10:00、16:00、21:00 三个时段更新上线</p>
+        </div>
+        <a class="more" href="#rank">看热门漫画排行 →</a>
+      </div>
+      <ul class="update">
+        <li><article class="up-item"><i class="c1">10:00</i><div><h3>斗破天穹</h3><p>第 483 话 · 天穹之变</p></div></article></li>
+        <li><article class="up-item"><i class="c2">16:00</i><div><h3>都市狂医</h3><p>第 317 话 · 银针渡人</p></div></article></li>
+        <li><article class="up-item"><i class="c3">21:00</i><div><h3>深海迷踪</h3><p>第 159 话 · 沉船密码</p></div></article></li>
+        <li><article class="up-item"><i class="c4">10:00</i><div><h3>星轨恋人</h3><p>第 204 话 · 轨道之外</p></div></article></li>
+        <li><article class="up-item"><i class="c5">16:00</i><div><h3>万古神帝</h3><p>第 722 话 · 神帝归来</p></div></article></li>
+        <li><article class="up-item"><i class="c6">21:00</i><div><h3>机甲纪元</h3><p>第 265 话 · 黎明装甲</p></div></article></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 栏目5：会员特权 -->
+  <section id="vip" aria-labelledby="h-vip">
+    <div class="wrap">
+      <div class="vip">
+        <div class="sec-head" style="margin-bottom:0">
+          <div>
+            <h2 id="h-vip">香香漫画会员特权</h2>
+            <p>免费注册即送 7 天体验，追漫更省心</p>
+          </div>
+          <a class="btn btn-1" href="#">开通香香漫画会员</a>
+        </div>
+        <div class="vip-grid">
+          <div class="vip-card"><b>免广告追漫</b><p>全程无弹窗干扰，阅读体验纯净流畅。</p></div>
+          <div class="vip-card"><b>抢先看新话</b><p>热门漫画提前 3 话解锁，追更不用等。</p></div>
+          <div class="vip-card"><b>离线缓存</b><p>一键下载整本漫画，断网也能继续看。</p></div>
+          <div class="vip-card"><b>多端同步</b><p>手机、平板、电脑书架实时同步进度。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目6：常见问题 -->
+  <section id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-faq">香香漫画常见问题</h2>
+          <p>关于看漫画、收费与账号的高频疑问</p>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>香香漫画看漫画需要付费吗？</summary>
+          <p>香香漫画站内绝大多数漫画章节免费开放阅读，会员仅用于免广告、抢先看与离线缓存等增值服务，不影响基础追漫体验。</p>
+        </details>
+        <details>
+          <summary>香香漫画多久更新一次？</summary>
+          <p>每天 10:00、16:00、21:00 三个时段批量更新，热门连载作品与作者更新节奏同步，更新后首页漫画榜单会同步刷新。</p>
+        </details>
+        <details>
+          <summary>手机上能直接看香香漫画吗？</summary>
+          <p>可以。香香漫画页面采用响应式布局，手机、平板与电脑均可自适应显示，无需下载客户端也能流畅阅读。</p>
+        </details>
+        <details>
+          <summary>如何找到适合自己的漫画分类？</summary>
+          <p>进入"漫画分类"栏目，按热血、恋爱、悬疑、玄幻、都市等标签筛选，也可以从热门排行榜按人气挑书。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目7：关于 -->
+  <section id="about" aria-labelledby="h-about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-about">关于香香漫画</h2>
+          <p>专注在线漫画阅读的内容平台</p>
+        </div>
+      </div>
+      <div class="about">
+        <div class="about-box">
+          <h3>香香漫画简介</h3>
+          <p>
+            香香漫画（xiangxiangmanhua-app）是一个面向中文读者的在线漫画阅读网站，致力于把好看的漫画送到读者指尖。
+            平台收录热血、恋爱、悬疑、玄幻、都市、搞笑、科幻等 26 类题材，累计漫画作品超过 38,000 部，
+            并以每日多时段更新保持连载同步。
+          </p>
+          <p style="margin-top:10px">
+            香香漫画坚持"看得爽、找得快、不卡顿"三件事：高清画质、智能题材筛选、多端自适应阅读，
+            让每一次打开香香漫画都能立刻进入故事。
+          </p>
+          <ul>
+            <li>全站漫画免费阅读，部分增值服务可选会员</li>
+            <li>26 个漫画题材分类，支持按热度与更新时间筛选</li>
+            <li>手机、平板、电脑三端自适应，进度自动同步</li>
+            <li>每日三时段更新，热门作品第一时间上线</li>
+          </ul>
+        </div>
+        <div class="about-box">
+          <h3>快速导航</h3>
+          <ul>
+            <li><a href="#featured">香香漫画精选推荐</a></li>
+            <li><a href="#rank">香香漫画热门排行榜</a></li>
+            <li><a href="#category">香香漫画题材分类</a></li>
+            <li><a href="#update">香香漫画今日更新</a></li>
+            <li><a href="#vip">香香漫画会员特权</a></li>
+            <li><a href="#faq">香香漫画常见问题</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-col">
+        <h4>香香漫画</h4>
+        <p style="font-size:13.5px;color:var(--sub)">
+          香香漫画官网 · 免费在线看漫画，热门漫画大全、漫画分类与漫画排行榜一站搞定。
+        </p>
+      </div>
+      <div class="f-col">
+        <h4>看漫画</h4>
+        <a href="#featured">精选漫画</a>
+        <a href="#rank">热门排行</a>
+        <a href="#category">漫画分类</a>
+        <a href="#update">最新更新</a>
+      </div>
+      <div class="f-col">
+        <h4>服务</h4>
+        <a href="#vip">会员特权</a>
+        <a href="#faq">常见问题</a>
+        <a href="#">意见反馈</a>
+        <a href="#">内容合作</a>
+      </div>
+      <div class="f-col">
+        <h4>关于</h4>
+        <a href="#about">关于香香漫画</a>
+        <a href="#">用户协议</a>
+        <a href="#">隐私政策</a>
+        <a href="#">版权声明</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 香香漫画 xiangxiangmanhua-app · 免费在线漫画阅读平台</span>
+      <span>关键词：香香漫画 · 在线漫画 · 漫画大全 · 免费漫画</span>
+    </div>
+  </div>
+</footer>
+
+<a class="totop" href="#top" aria-label="返回顶部">↑</a>
+
+<script>
+  (function(){
+    var burger = document.getElementById('burger');
+    var menu = document.getElementById('menu');
+    burger.addEventListener('click', function(){
+      var open = menu.classList.toggle('show');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') {
+        menu.classList.remove('show');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
